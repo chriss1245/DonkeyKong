@@ -145,7 +145,7 @@ class Game:
                     self.start()
                     self.state = 'playing'
                 if pyxel.btnp(pyxel.KEY_Q):
-                    self.quit()
+                    pyxel.quit()
         
         elif self.state == 'playing':
             #The main game -----------------------------------------------------------------------------------------------------
