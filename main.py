@@ -32,7 +32,7 @@ class Game:
  
         #Creating the loose condition
         self.state = 'menu'
-        pyxel.init(constants.WIDTH, constants.HEIGHT, caption = constants.CAPTION)
+        pyxel.init(constants.WIDTH, constants.HEIGHT)
         pyxel.load(r'assets/mario.pyxres')
         pyxel.image(2).load(56, 0, "assets/Mario-vs-Donkey.png")
         pyxel.image(2).load(56, 20, "assets/Game-Over.png")
@@ -141,7 +141,7 @@ class Game:
 
         
         if self.state == 'menu' or self.state == 'lost' or self.state == 'won': # Interface of the seccondary windows
-                if pyxel.btnp(pyxel.KEY_ENTER):
+                if pyxel.btnp(pyxel.KEY_RETURN):
                     self.start()
                     self.state = 'playing'
                 if pyxel.btnp(pyxel.KEY_Q):
