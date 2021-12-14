@@ -211,3 +211,34 @@ class mario:
     def position_reset(self):
         self.__xpos = self.__originalx
         self.__ypos = self.__originaly
+
+    def get_Frame(self):
+        stairsInfo = self.stairs_check()
+        if stairsInfo[0] == True: # Checks whether Mario is in a stair
+            if self.sprite == 3:
+                return (self.xpos, self.ypos, 0, 78, 32, 16, 16)
+            elif self.sprite == 4: 
+                return (self.xpos, self.ypos, 0, 101, 32, 16, 16)
+            else:
+                return (self.xpos, self.ypos, 0, 148, 32, 16, 16)
+                
+        else:
+            if self.direction == 0:
+                if self.sprite == 0:
+                    return (self.xpos, self.ypos, 0, 6, 32, 16, 16)
+                elif self.sprite == 1:
+                    return (self.xpos, self.ypos, 0, 29, 32, 16, 16)
+                elif self.sprite == 2:
+                    return (self.xpos, self.ypos, 0, 53, 32, 16, 16)
+                else:
+                    return (self.xpos, self.ypos, 0, 148, 32, 16, 16)
+            elif self.direction == 1:
+                if self.sprite == 0:
+                    return (self.xpos, self.ypos, 0, 192, 0, 16, 16)
+                elif self.sprite == 1:
+                    return (self.xpos, self.ypos, 0, 208, 0, 16, 16)
+                elif self.sprite == 2:
+                    return (self.xpos, self.ypos, 0, 224, 0, 16, 16)
+                else:
+                    return (self.xpos, self.ypos, 0, 148, 32, 16, 16)
+        

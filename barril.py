@@ -41,7 +41,6 @@ class Barril:
     def update(self, nFrame):
         nFrame //= self.__relentization
         
-        
         self.stairs_check()
                 
         if self.__stairs[0] and self.__stairs[1] and self.__stairs[2] == 1:
